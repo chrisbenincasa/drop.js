@@ -58,14 +58,14 @@ jQuery.extend( jQuery.easing,
 });
 
 ;(function($, window, document, undefined){
-  $.fn.dropIt = function(options)
+  $.fn.drop = function(options)
   {
     _this = this;
-    options = $.extend({}, dropItdefaults, options);
+    options = $.extend({}, dropDefaults, options);
     return function(all){
       all.each(function(){
         $this = $(this);
-        $this.addClass('dropit');
+        $this.addClass('drop');
 
         //If list is displayed veritcally, add extra left padding to all sub-menus
         if($this.hasClass('vertical'))
@@ -152,7 +152,7 @@ jQuery.extend( jQuery.easing,
     }
   };
 
-  var dropItdefaults = {
+  var dropDefaults = {
     trigger: "hover",
     animation: 'slide', /* none, slide, fade, grow */
     easing: 'swing', /* swing, linear, bounce */
