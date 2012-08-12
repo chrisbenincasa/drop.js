@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery DropDown</title>
+  <link rel="stylesheet" type="text/css" href="dropit.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="dropit.0.1.js"></script>
+</head>
+<body>
+  <div class="container">
+    <ul class="someOtherClass">
+      <li><a href="#">Thing 1</a></li>
+      <li><a href="#">Thing 2</a></li>
+      <li><a href="#">Thing 3</a>
+        <ul>
+          <li><a href="#">Sub-thing 1</a></li>
+          <li><a href="#">Sub-thing 2</a>
+             <ul>
+              <li><a href="#">Sub-sub-thing 1</a></li>
+              <li><a href="#">Sub-sub-thing 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <ul class="someOtherClass">
+      <li><a href="#">Thing 1</a></li>
+      <li><a href="#">Thing 2</a></li>
+      <li><a href="#">Thing 3</a>
+        <ul>
+          <li><a href="#">Sub-thing 1</a></li>
+          <li><a href="#">Sub-thing 2</a>
+             <ul>
+              <li><a href="#">Sub-sub-thing 1</a></li>
+              <li><a href="#">Sub-sub-thing 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <ul class="vertical">
+      <li><a href="#">Thing 1</a></li>
+      <li><a href="#">Thing 2</a>
+        <ul>
+          <li><a href="#">Sub-thing 1</a></li>
+          <li><a href="#">Sub-thing 2</a>
+             <ul>
+              <li><a href="#">Sub-sub-thing 1</a></li>
+              <li><a href="#">Sub-sub-thing 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Thing 3</a>
+        <ul>
+          <li><a href="#">Sub-thing 1</a></li>
+          <li><a href="#">Sub-thing 2</a>
+             <ul>
+              <li><a href="#">Sub-sub-thing 1</a></li>
+              <li><a href="#">Sub-sub-thing 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+  <script type="text/javascript">
+    $('ul.someOtherClass').dropIt({animation: 'grow', speedIn: 'normal', easing: 'swing'});
+    $('ul.vertical').dropIt();
+  </script>
+</html>

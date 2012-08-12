@@ -1,0 +1,74 @@
+div.container
+{
+  padding: 40px;
+  margin-bottom: 45px;
+  border: thin solid;
+}
+
+ul.dropit, ul.dropit li, ul.dropit li *
+{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+ul.vertical
+{
+  width: 200px;
+}
+
+ul.vertical li
+{
+  display: list-item !important;
+}
+
+ul.dropit li
+{
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: lightgray;
+  padding: 5px;
+}
+ul.dropit li a
+{
+  white-space: nowrap;
+}
+
+ul.dropit li:nth-child(odd)
+{
+  background: lightblue;
+}
+
+ul.dropit li:nth-child(even)
+{
+  background: lightgray;
+}
+
+ul.dropit ul
+{
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.dropit .sub-menu
+{
+  top: 0;
+  left: 100%;  
+}
+
+
+ul.dropit li ul, div.dropit div div.group
+{
+  display: none;
+}
+
+.dropit div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
