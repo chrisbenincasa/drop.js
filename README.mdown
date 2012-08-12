@@ -1,0 +1,6 @@
+# drop.js
+### A jQuery plugin for easy multi-level, drop-down menus
+
+The purpose of this project is make a simple, yet customizable, drop-down menu plugin that works in all situations without more than a line:
+
+  $('#nav_menu').drop();
