@@ -5,7 +5,7 @@ div.container
   border: thin solid;
 }
 
-ul.dropit, ul.dropit li, ul.dropit li *
+ul.drop, ul.drop li, ul.drop li *
 {
   margin: 0;
   padding: 0;
@@ -25,29 +25,28 @@ ul.vertical li
   display: list-item !important;
 }
 
-ul.dropit li
+ul.drop li
 {
-  display: inline-block;
-  vertical-align: middle;
+  float: left;
   border-bottom: lightgray;
   padding: 5px;
 }
-ul.dropit li a
+ul.drop li a
 {
   white-space: nowrap;
 }
 
-ul.dropit li:nth-child(odd)
+ul.drop li.odd
 {
-  background: lightblue;
+
 }
 
-ul.dropit li:nth-child(even)
+ul.drop li.even
 {
-  background: lightgray;
+  
 }
 
-ul.dropit ul
+ul.drop ul
 {
   position: absolute;
   z-index: 1000;
@@ -55,19 +54,19 @@ ul.dropit ul
   left: 0;
 }
 
-.dropit .sub-menu
+.drop .sub-menu
 {
   top: 0;
   left: 100%;  
 }
 
 
-ul.dropit li ul, div.dropit div div.group
+ul.drop li ul, div.drop div div.group
 {
   display: none;
 }
 
-.dropit div
+.drop div
 {
   display: inline-block;
   vertical-align: middle;

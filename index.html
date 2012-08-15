@@ -2,75 +2,69 @@
 <html>
 <head>
   <title>jQuery DropDown</title>
-  <link rel="stylesheet" type="text/css" href="dropit.css">
+  <link rel="stylesheet" type="text/css" href="drop.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="dropit.0.1.js"></script>
+  <script type="text/javascript" src="drop.0.1.js"></script>
+  <style type="text/css">
+    ul.dropDown > li
+    {
+      padding: 10px;
+    }
+
+    ul.dropDown li.odd
+    {
+      background-color: gray;
+    }
+
+    ul.dropDown li.even
+    {
+      background-color: lightgray;
+    }
+
+    ul.dropDown > li:first-child
+    {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    ul.dropDown > li:last-child
+    {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
-    <ul class="someOtherClass">
-      <li><a href="#">Thing 1</a></li>
-      <li><a href="#">Thing 2</a></li>
-      <li><a href="#">Thing 3</a>
+    <ul class="dropDown">
+      <li><a href="#">Menu Item 1</a>
         <ul>
-          <li><a href="#">Sub-thing 1</a></li>
-          <li><a href="#">Sub-thing 2</a>
-             <ul>
-              <li><a href="#">Sub-sub-thing 1</a></li>
-              <li><a href="#">Sub-sub-thing 2</a></li>
-            </ul>
+          <li><a href="#">Sub-Menu Item 1</a></li>
+          <li><a href="#">Sub-Menu Item 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu Item 2</a>
+        <ul>
+          <li><a href="#">Sub-Menu Item 1</a></li>
+          <li><a href="#">Sub-Menu Item 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu Item 3</a>
+        <ul>
+          <li><a href="#">Sub-Menu Item 1</a></li>
+          <li><a href="#">Sub-Menu Item 2</a>
+            <ul>
+              <li><a href="#">Sub-sub-menu item 1</a></li>
+              <li><a href="#">Sub-sub-menu item 2</a></li>
           </li>
         </ul>
       </li>
     </ul>
   </div>
-  <div class="container">
-    <ul class="someOtherClass">
-      <li><a href="#">Thing 1</a></li>
-      <li><a href="#">Thing 2</a></li>
-      <li><a href="#">Thing 3</a>
-        <ul>
-          <li><a href="#">Sub-thing 1</a></li>
-          <li><a href="#">Sub-thing 2</a>
-             <ul>
-              <li><a href="#">Sub-sub-thing 1</a></li>
-              <li><a href="#">Sub-sub-thing 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div class="container">
-    <ul class="vertical">
-      <li><a href="#">Thing 1</a></li>
-      <li><a href="#">Thing 2</a>
-        <ul>
-          <li><a href="#">Sub-thing 1</a></li>
-          <li><a href="#">Sub-thing 2</a>
-             <ul>
-              <li><a href="#">Sub-sub-thing 1</a></li>
-              <li><a href="#">Sub-sub-thing 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#">Thing 3</a>
-        <ul>
-          <li><a href="#">Sub-thing 1</a></li>
-          <li><a href="#">Sub-thing 2</a>
-             <ul>
-              <li><a href="#">Sub-sub-thing 1</a></li>
-              <li><a href="#">Sub-sub-thing 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  
 </body>
   <script type="text/javascript">
-    $('ul.someOtherClass').dropIt({animation: 'grow', speedIn: 'normal', easing: 'swing'});
-    $('ul.vertical').dropIt();
+    $('.dropDown').drop();
   </script>
 </html>
