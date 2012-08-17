@@ -44,25 +44,10 @@
         }
         if(options.trigger === 'hover')
         {
-          //Clear the memory after styles are reset
-          //To-do: think of better solution
-          $this.children('li').on('mouseleave', function(){
-            setTimeout(function(){
-              for(x in memory)
-              {
-                delete memory[x];
-              }
-            }, options.speedIn * 2);
-          });
-
           $('li', $this).on('mouseenter', function(event){
             if(_hasSubMenu($(this)))
             {
-              if(!memory[$(this)])
-              {
-                memory[$(this)] = $(this).clone();  
-              }
-
+              $(this).data('border-radius', $(this).css('border-radius'));
               if(options.orientation === 'horizontal')
               {
                 $(this).addClass('active_menu').css({
@@ -84,16 +69,14 @@
             $currentLi = $(this);
             //console.log('out on ', $currentLi)
             _hide(event);
+
             setTimeout(function(){
-              $currentLi.css({
-                'border-bottom-left-radius': memory[$currentLi].css('border-bottom-left-radius'),
-                'border-bottom-right-radius': memory[$currentLi].css('border-bottom-right-radius'),
-                'border-top-left-radius': memory[$currentLi].css('border-top-left-radius'),
-                'border-top-right-radius': memory[$currentLi].css('border-top-right-radius')
-              });
-              $currentLi.add($currentLi.find('li')).removeClass('active_menu');
-            }, options.speedIn + 10);
-            
+              if($currentLi.data('border-radius'))
+              {
+                $currentLi.css('border-radius', $currentLi.data('border-radius'));
+              }
+            }, options.speedOut + 10);
+            $currentLi.add($currentLi.find('li')).removeClass('active_menu');
           });
         } 
         else if(options.trigger === 'click')
