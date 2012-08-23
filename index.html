@@ -30,12 +30,40 @@
       color: white;
     }
 
-    ul.dropDown li.odd {
-      background-color: gray;
+    ul.dropDown ul.nested li.odd {
+      background-image: -webkit-linear-gradient(top, #AA66CC, #9933CC);
+      background-image: -moz-linear-gradient(top, #AA66CC, #9933CC);
+      background-image: -o-linear-gradient(top, #AA66CC, #9933CC);
+      background-image: linear-gradient(top, #AA66CC, #9933CC);
+      background-image: -ms-linear-gradient(top, #AA66CC, #9933CC);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AA66CC), to(#9933CC));
     }
 
-    ul.dropDown li.even {
-      background-color: lightgray;
+    ul.dropDown ul.nested li.even {
+      background-image: -webkit-linear-gradient(top, #FFBB33, #FF8800);
+      background-image: -moz-linear-gradient(top, #FFBB33, #FF8800);
+      background-image: -o-linear-gradient(top, #FFBB33, #FF8800);
+      background-image: linear-gradient(top, #FFBB33, #FF8800);
+      background-image: -ms-linear-gradient(top, #FFBB33, #FF8800);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFBB33), to(#FF8800));
+    }
+
+    ul.dropDown ul.nested ul.nested li.odd {
+      background-image: -webkit-linear-gradient(top, #99CC00, #669900);
+      background-image: -moz-linear-gradient(top, #99CC00, #669900);
+      background-image: -o-linear-gradient(top, #99CC00, #669900);
+      background-image: linear-gradient(top, #99CC00, #669900);
+      background-image: -ms-linear-gradient(top, #99CC00, #669900);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#99CC00), to(#669900));
+    }
+
+    ul.dropDown ul.nested ul.nested li.even {
+      background-image: -webkit-linear-gradient(top, #FF4444, #CC0000);
+      background-image: -moz-linear-gradient(top, #FF4444, #CC0000);
+      background-image: -o-linear-gradient(top, #FF4444, #CC0000);
+      background-image: linear-gradient(top, #FF4444, #CC0000);
+      background-image: -ms-linear-gradient(top, #FF4444, #CC0000);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF4444), to(#CC0000));
     }
 
     ul.dropDown > li:first-child {
@@ -63,7 +91,12 @@
       <li><a href="#">Menu Item 1</a>
         <ul>
           <li><a href="#">Sub-Menu Item 1</a></li>
-          <li><a href="#">Sub-Menu Item 2</a></li>
+          <li><a href="#">Sub-Menu Item 2</a>
+            <ul>
+              <li><a href="#">Sub-sub-menu item 1</a></li>
+              <li><a href="#">Sub-sub-menu item 2</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li><a href="#">Menu Item 2</a>
@@ -75,11 +108,7 @@
       <li><a href="#">Menu Item 3</a>
         <ul>
           <li><a href="#">Sub-Menu Item 1</a></li>
-          <li><a href="#">Sub-Menu Item 2</a>
-            <ul>
-              <li><a href="#">Sub-sub-menu item 1</a></li>
-              <li><a href="#">Sub-sub-menu item 2</a></li>
-          </li>
+          <li><a href="#">Sub-Menu Item 2</a></li>
         </ul>
       </li>
     </ul>

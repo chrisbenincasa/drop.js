@@ -67,7 +67,6 @@
           })
           .on('mouseleave', function(event){
             $currentLi = $(this);
-            //console.log('out on ', $currentLi)
             _hide(event);
 
             setTimeout(function(){
@@ -81,7 +80,9 @@
         } 
         else if(options.trigger === 'click')
         {
-          $('li',$this).on('click', function(event){
+          $('li', $this).filter(function(){
+            return _hasSubMenu($(this));
+          }).on('click', function(event){
             event.stopPropagation();
             event.preventDefault();
             $target = $(event.currentTarget);
