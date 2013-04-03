@@ -42,6 +42,11 @@
         } else {
           $('li ul', $this).addClass('nested').find('ul').addClass('sub-menu');
         }
+
+        $this.children().each(function(index, ele){
+          console.log($(ele).find('ul'));
+        })
+
         if(options.trigger === 'hover')
         {
           $('li', $this).on('mouseenter', function(event){
